@@ -1,0 +1,40 @@
+{
+  "name": "domestic-workers-system",
+  "version": "1.0.0",
+  "description": "Domestic workers system is a system that links homeowners to the housekeepers of their choice.",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "bcrypt": "^3.0.7",
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^7.0.0",
+    "pg": "^7.17.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kagorora/Domestic-workers-system.git"
+  },
+  "author": "code-knights",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kagorora/Domestic-workers-system/issues"
+  },
+  "homepage": "https://github.com/Kagorora/Domestic-workers-system#readme"
+}
