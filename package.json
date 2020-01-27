@@ -21,11 +21,13 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
+    "babel-watch": "^7.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.0"
   },
   "scripts": {
+    "dev-server": "babel-watch  ./src/db/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
