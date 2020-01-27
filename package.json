@@ -27,7 +27,7 @@
     "eslint-plugin-import": "^2.20.0"
   },
   "scripts": {
-    "dev-server": "babel-watch  ./src/db/server.js",
+    "dev-server": "babel-watch  ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
