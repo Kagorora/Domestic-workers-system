@@ -9,7 +9,7 @@ const app = express();
 app.use(urlencoded({ extended: false }));
 app.use(json());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 6000;
 app.listen(port);
 masterRoute(app);
 console.log(`App listening on port ${port}...`)

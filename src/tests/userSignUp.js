@@ -8,8 +8,8 @@ describe('user SignUp',()=>{
         request(server)
         .post('/api/v1/auth/signup')
         .send({
-            firstname:'eugene',
-            lastname:'sadmm',
+            firstName:'eugene',
+            lastName:'sadmm',
             email:'weod@gmail.com',
             password:'sad123'
         }).end((err,result)=>{
