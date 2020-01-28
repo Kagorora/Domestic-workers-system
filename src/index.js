@@ -1,25 +1,17 @@
 import express from "express";
+import masterRoute from './routes/masterRoutes';
+import {json,urlencoded} from 'body-parser';
+import { config } from 'dotenv';
 
-
+config();
 const app = express();
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-
-
-app.get("/", (req, res) => res
-.status(200)
-.send( "Welcome to HouseKeepers.com!"));
-
-
-app.use("*", (req, res) => res
-.status(405)
-.send("Method Not Allowed!"));
-
+app.use(urlencoded({ extended: false }));
+app.use(json());
 
 const port = process.env.PORT || 3000;
 app.listen(port);
-
+masterRoute(app);
 console.log(`App listening on port ${port}...`)
 
 export default app;
