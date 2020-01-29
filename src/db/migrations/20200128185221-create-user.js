@@ -24,7 +24,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       nid: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       status: {
         type: Sequelize.STRING
