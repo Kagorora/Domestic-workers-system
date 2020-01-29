@@ -4,17 +4,14 @@ import server from '../index';
 use(chaiHttp);
 
 describe('user SignUp',()=>{
-    it('will retrun 201 status',(done)=>{
-        request(server)
-        .post('/api/v1/auth/signup')
-        .send({
+    it('will retrun 201 status', async() =>{
+    const response =  await request(server)
+        .post('/api/v1/auth/signup').send({
             firstName:'eugene',
             lastName:'sadmm',
             email:'weod@gmail.com',
             password:'sad123'
-        }).end((err,result)=>{
-            expect(result).to.have.status(201);
-        })
-        done();
+        });
+        expect(response).to.have.status(201);
     })
 })
