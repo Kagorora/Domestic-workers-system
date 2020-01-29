@@ -35,7 +35,8 @@
   },
   "scripts": {
     "dev-server": "nodemon --exec babel-node  ./src/index.js",
-    "test": "nyc --reporter=html --reporter=text mocha --time 10000 --exit --require @babel/register --require @babel/polyfill ./src/tests/main.test.js"
+    "test": "NODE_ENV=test npm run migrateTest && NODE_ENV=test nyc --reporter=html --reporter=text mocha  --require @babel/register ./src/tests/main.test.js --exit",
+    "migrateTest": "sequelize db:migrate:undo:all && sequelize db:migrate"
   },
   "repository": {
     "type": "git",
