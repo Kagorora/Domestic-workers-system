@@ -1,9 +1,9 @@
 import express from 'express'
-import GetHousekeepers from '../controllers/housekeepersController'
+import GetHouseMaids from '../controllers/housekeepersController'
 
 const router = express.Router()
 
 
-router.get('/housekeepers', GetHousekeepers.viewAll)
+router.get('/maids', GetHouseMaids.viewAll)
 
 export default router

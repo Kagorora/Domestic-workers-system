@@ -1,14 +1,14 @@
 import chai, { expect } from 'chai'
 import chaiHttp from 'chai-http'
-import jwt from 'jsonwebtoken'
 import app from '../index'
-import mockData from './mockData'
 
 chai.use(chaiHttp)
 chai.should()
 
 const RequestWorkerTests = () => {
+  // eslint-disable-next-line no-undef
   describe('Client requesting for a domestic Worker', () => {
+    // eslint-disable-next-line no-undef
     it('It should return 401 for when no token provided', (done) => {
       chai
         .request(app)
@@ -18,6 +18,7 @@ const RequestWorkerTests = () => {
           done()
         })
     })
+    // eslint-disable-next-line no-undef
     it('It should return 401 for invalid token', (done) => {
       const Token = 'token'
       chai
