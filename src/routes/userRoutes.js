@@ -4,7 +4,7 @@ import addDomesticWorker from '../controllers/addDomesticWorker'
 import domesticValidation from '../middlewares/inputValidation'
 import authChecker from '../middlewares/checkAuth'
 import login from '../controllers/loginController'
-import validateLogin from '../middlewares/validateLogin';
+import validateLogin from '../middlewares/validateLogin'
 
 const userRoutes = express.Router({ mergeParams: true })
 
