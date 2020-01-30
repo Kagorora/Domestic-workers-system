@@ -10,8 +10,10 @@ app.use(urlencoded({ extended: false }))
 app.use(json())
 
 const port = process.env.PORT || 4000
-app.listen(port)
 masterRoute(app)
-console.log(`App listening on port ${port}...`)
+app.listen(port, () => {
+  console.log(`App listening on port ${port}...`)
+})
+
 
 export default app
