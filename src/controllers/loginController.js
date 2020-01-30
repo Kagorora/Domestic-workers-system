@@ -11,7 +11,12 @@ const loginController = async (req, res) => {
       },
       raw: true,
     })
-    if (userExists) {
+    if (!userExists) {
+      res.status(401).json({
+        status: res.statusCode,
+        result: 'Invalid email or password!',
+      })
+    } else if (userExists) {
       const encryptedPswd = userExists.password
       const pswdMatches = compare(password, encryptedPswd)
       if (pswdMatches) {
@@ -27,17 +32,12 @@ const loginController = async (req, res) => {
           userInfo,
           token,
         })
-      } else {
-        res.status(401).json({
-          status: res.statusCode,
-          result: 'Invalid email or password!',
-        })
       }
     }
   } catch (error) {
     res.status(500).json({
       status: res.statusCode,
-      error: 'Internal server error',
+      error,
     })
   }
 }
