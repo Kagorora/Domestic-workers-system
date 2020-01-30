@@ -1,10 +1,12 @@
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
+import environment from 'dotenv'
 import models from '../db/models'
 
+environment.config()
 
 export default class signUpController {
-  static async signUp(request, response) {
+  static async signUp (request, response) {
     const {
       firstName, lastName, email, password,
     } = request.body
@@ -14,7 +16,7 @@ export default class signUpController {
       const newUser = await models.user.create({
         firstName, lastName, email, password: hashedPassword, type: 'client',
       })
-      const token = jwt.sign({ userId: newUser.id, email: newUser.email }, process.env.secretkey)
+      const token = jwt.sign({ userId: newUser.id, email: newUser.email }, process.env.SECRET_OR_PRIVATE_KEY)
       response.status(201).json({ token, message: 'user successfully created' })
     })
   }
