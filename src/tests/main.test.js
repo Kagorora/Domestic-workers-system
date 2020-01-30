@@ -1,6 +1,4 @@
-import runUserSignUpTests from './userSignUp.spec'
-import runrequestWorkerTests from './requestWorker.spec'
+import runrequestWorkerTests from './requestWorker.test'
 
 
-runUserSignUpTests()
 runrequestWorkerTests()
