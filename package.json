@@ -11,6 +11,7 @@
     "@babel/preset-env": "^7.8.3",
     "@babel/register": "^7.8.3",
     "@babel/runtime": "^7.8.3",
+    "@hapi/joi": "^17.1.0",
     "bcrypt": "^3.0.7",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
@@ -39,6 +40,7 @@
   "scripts": {
     "dev-server": "nodemon --exec babel-node  ./src/index.js",
     "test": "NODE_ENV=test npm run migrateTest && NODE_ENV=test nyc --reporter=html --reporter=text mocha  --require @babel/register ./src/tests/main.test.js --exit",
+    "testAddDom": "nyc --reporter=html --reporter=text mocha --time 10000 --exit --require @babel/register --require @babel/polyfill ./src/tests/addDomesticWorker.test.js",
     "migrateTest": "sequelize db:migrate:undo:all && sequelize db:migrate"
   },
   "repository": {
