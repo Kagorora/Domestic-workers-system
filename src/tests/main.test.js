@@ -1,9 +1,9 @@
 import runrequestWorkerTests from './requestWorker.test'
 import testLogin from './login.spec'
-import userSignUp from './useSignup.stest';
+import addDomesticTests from './addDomesticWorker.test'
 import houseMaidsTests from './houseMaids.spec'
 
-userSignUp()
+addDomesticTests()
 testLogin()
 runrequestWorkerTests()
 houseMaidsTests()
