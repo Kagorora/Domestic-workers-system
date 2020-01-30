@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable no-unused-vars */
 module.exports = (sequelize, DataTypes) => {
   const user = sequelize.define('user', {
     firstName: DataTypes.STRING,
@@ -10,10 +10,13 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING,
     type: DataTypes.STRING,
     description: DataTypes.STRING,
-    profile: DataTypes.STRING
-  }, {});
-  user.associate = function(models) {
+    profile: DataTypes.STRING,
+  }, {})
+  // eslint-disable-next-line func-names
+  user.associate = function (models) {
+
     // associations can be defined here
-  };
-  return user;
-};
+
+  }
+  return user
+}

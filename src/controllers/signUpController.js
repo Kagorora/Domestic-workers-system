@@ -16,7 +16,7 @@ export default class signUpController {
       const newUser = await models.user.create({
         firstName, lastName, email, password: hashedPassword, type: 'client',
       })
-      const token = jwt.sign({ userId: newUser.id, email: newUser.email }, process.env.SECRET_OR_PRIVATE_KEY)
+      const token = jwt.sign({ userId: newUser.id, email: newUser.email }, process.env.secretkey)
       response.status(201).json({ token, message: 'user successfully created' })
     })
   }
