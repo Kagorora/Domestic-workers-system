@@ -23,8 +23,8 @@ class userValidate {
       const wrongInput = validationResult.error.details[0].message
         .replace('"', ' ')
         .replace('"', '')
-      return res.status(400).json({
-        status: 400,
+      return res.status(422).json({
+        status: 422,
         error: wrongInput,
       })
     }
