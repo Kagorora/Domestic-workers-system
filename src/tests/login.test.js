@@ -30,8 +30,7 @@ const testLogin = () => {
         })
         .end((err, res) => {
           expect(res.body.status).to.equal(401)
-          expect(res.body).to.have.property('error')
-          expect(res.body.error).to.be('Invalid email or password!')
+          expect(res.body.result).to.be('Invalid email or password!')
         })
       done()
     })
@@ -44,7 +43,7 @@ const testLogin = () => {
           password: 'sad123',
         })
         .end((err, res) => {
-          expect(res.body.status).to.equal(200)
+          expect(res.body.status).to.be.equal(200)
         })
       done()
     })

@@ -28,17 +28,14 @@ const loginController = async (req, res) => {
           password, nid, email, ...userInfo
         } = userExists
         res.status(200).json({
-          status: res.statusCode,
+          status: 200,
           userInfo,
           token,
         })
       }
     }
   } catch (error) {
-    res.status(500).json({
-      status: res.statusCode,
-      error,
-    })
+    // return res.status(500).json({ error })
   }
 }
 export default loginController
