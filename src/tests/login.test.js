@@ -30,7 +30,7 @@ const testLogin = () => {
         })
         .end((err, res) => {
           expect(res.body.status).to.equal(401)
-          expect(res.body.result).to.be('Invalid email or password!')
+          expect(res.body.result).to.be.equal('Invalid email or password!')
         })
       done()
     })
