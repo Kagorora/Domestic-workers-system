@@ -1,16 +1,20 @@
 import chai, { expect } from 'chai'
 import chaiHttp from 'chai-http'
+import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
 import server from '../index'
 import mockData from './mockData'
 
+dotenv.config()
 chai.use(chaiHttp)
 chai.should()
 
 const addDomesticTests = () => {
   describe('add domestic Emp', () => {
     it('should be able to register a Domestic worker', (done) => {
+      const Signed = mockData.admin
       const newDome = mockData.user1
-      const Token = mockData.token.token
+      const Token = jwt.sign(Signed, process.env.secretkey, { expiresIn: '24h' })
       chai.request(server)
         .post('/api/v1/auth/addDomestic')
         .set('token', Token)
@@ -20,13 +24,15 @@ const addDomesticTests = () => {
           done()
         })
     })
-    it('should be able to register a Domestic worker', (done) => {
-      const newDome = ''
-      const Token = mockData.token.token
+    it('should not be able to register a Domestic worker', (done) => {
+      const newDome2 = ''
+      const Signed = mockData.admin
+      const Token = jwt.sign(Signed, process.env.secretkey, { expiresIn: '24h' })
+
       chai.request(server)
         .post('/api/v1/auth/addDomestic')
         .set('token', Token)
-        .send(newDome)
+        .send(newDome2)
         .end((err, res) => {
           expect(res.status).to.equal(422)
           done()
