@@ -52,6 +52,8 @@ Domestic workers system is a system that links homeowners to the housekeepers of
 
 ### Links.
 
-### 1.Pivotal Tracker.
+- [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/2430736)
 
-https://www.pivotaltracker.com/n/projects/2430736
+
+- [UI Design](https://xd.adobe.com/view/9e69f448-3b2a-4030-5aa7-22c5a1d2c8f9-e858/)
+
