@@ -1,0 +1,22 @@
+"use strict";
+
+var _interopRequireDefault = require("/Users/maximekagororaalain/Documents/Domestic-workers-system/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _express = _interopRequireDefault(require("express"));
+
+var _requestWorkerController = _interopRequireDefault(require("../controllers/requestWorkerController"));
+
+var _checkAuth = _interopRequireDefault(require("../middlewares/checkAuth"));
+
+var router = _express["default"].Router();
+
+var requestWorker = _requestWorkerController["default"].requestWorker;
+router.post('/clientRequest', [_checkAuth["default"].auth, requestWorker]);
+var _default = router;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9yb3V0ZXMvY2xpZW50cy5qcyJdLCJuYW1lcyI6WyJyb3V0ZXIiLCJleHByZXNzIiwiUm91dGVyIiwicmVxdWVzdFdvcmtlciIsInJlcXVlc3RXb3JrZXJDb250cm9sbGVyIiwicG9zdCIsImF1dGhDaGVja2VyIiwiYXV0aCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBR0EsSUFBTUEsTUFBTSxHQUFHQyxvQkFBUUMsTUFBUixFQUFmOztJQUdFQyxhLEdBQ0VDLG1DLENBREZELGE7QUFJRkgsTUFBTSxDQUFDSyxJQUFQLENBQVksZ0JBQVosRUFBOEIsQ0FBQ0Msc0JBQVlDLElBQWIsRUFBbUJKLGFBQW5CLENBQTlCO2VBR2VILE0iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJ1xuaW1wb3J0IHJlcXVlc3RXb3JrZXJDb250cm9sbGVyIGZyb20gJy4uL2NvbnRyb2xsZXJzL3JlcXVlc3RXb3JrZXJDb250cm9sbGVyJ1xuaW1wb3J0IGF1dGhDaGVja2VyIGZyb20gJy4uL21pZGRsZXdhcmVzL2NoZWNrQXV0aCdcblxuXG5jb25zdCByb3V0ZXIgPSBleHByZXNzLlJvdXRlcigpXG5cbmNvbnN0IHtcbiAgcmVxdWVzdFdvcmtlcixcbn0gPSByZXF1ZXN0V29ya2VyQ29udHJvbGxlclxuXG5cbnJvdXRlci5wb3N0KCcvY2xpZW50UmVxdWVzdCcsIFthdXRoQ2hlY2tlci5hdXRoLCByZXF1ZXN0V29ya2VyXSlcblxuXG5leHBvcnQgZGVmYXVsdCByb3V0ZXJcbiJdfQ==

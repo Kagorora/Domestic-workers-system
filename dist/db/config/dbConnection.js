@@ -1,0 +1,19 @@
+"use strict";
+
+var _interopRequireDefault = require("/Users/maximekagororaalain/Documents/Domestic-workers-system/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _sequelize = _interopRequireDefault(require("sequelize"));
+
+var dbconnrection = new _sequelize["default"]('postgres', process.env.DB_USER, process.env.DB_PASSWORD, {
+  host: 'localhost',
+  port: 5432,
+  dialect: 'postgres'
+});
+var _default = dbconnrection;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9kYi9jb25maWcvZGJDb25uZWN0aW9uLmpzIl0sIm5hbWVzIjpbImRiY29ubnJlY3Rpb24iLCJzZXF1ZWxpemUiLCJwcm9jZXNzIiwiZW52IiwiREJfVVNFUiIsIkRCX1BBU1NXT1JEIiwiaG9zdCIsInBvcnQiLCJkaWFsZWN0Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTs7QUFFQSxJQUFNQSxhQUFhLEdBQUcsSUFBSUMscUJBQUosQ0FBYyxVQUFkLEVBQTBCQyxPQUFPLENBQUNDLEdBQVIsQ0FBWUMsT0FBdEMsRUFBK0NGLE9BQU8sQ0FBQ0MsR0FBUixDQUFZRSxXQUEzRCxFQUNwQjtBQUNFQyxFQUFBQSxJQUFJLEVBQUUsV0FEUjtBQUVFQyxFQUFBQSxJQUFJLEVBQUUsSUFGUjtBQUdFQyxFQUFBQSxPQUFPLEVBQUU7QUFIWCxDQURvQixDQUF0QjtlQU1lUixhIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHNlcXVlbGl6ZSBmcm9tICdzZXF1ZWxpemUnXG5cbmNvbnN0IGRiY29ubnJlY3Rpb24gPSBuZXcgc2VxdWVsaXplKCdwb3N0Z3JlcycsIHByb2Nlc3MuZW52LkRCX1VTRVIsIHByb2Nlc3MuZW52LkRCX1BBU1NXT1JELFxuICB7XG4gICAgaG9zdDogJ2xvY2FsaG9zdCcsXG4gICAgcG9ydDogNTQzMixcbiAgICBkaWFsZWN0OiAncG9zdGdyZXMnLFxuICB9KVxuZXhwb3J0IGRlZmF1bHQgZGJjb25ucmVjdGlvblxuIl19

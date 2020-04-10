@@ -43,7 +43,9 @@
     "dev-server": "nodemon --exec babel-node  ./src/index.js",
     "test": "NODE_ENV=test npm run migrateTest && NODE_ENV=test nyc  --reporter=text --reporter=lcov mocha --timeout 1000 --require @babel/polyfill  --require @babel/register ./src/tests/main.test.js --exit",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "migrateTest": "sequelize db:migrate:undo:all && sequelize db:migrate"
+    "migrateTest": "sequelize db:migrate:undo:all && sequelize db:migrate",
+    "build": "babel src --out-dir dist --source-maps inline --copy-files",
+    "start": "nodemon dist/index.js"
   },
   "repository": {
     "type": "git",
