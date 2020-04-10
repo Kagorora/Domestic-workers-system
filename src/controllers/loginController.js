@@ -11,6 +11,7 @@ const loginController = async (req, res) => {
       },
       raw: true,
     })
+    
     if (!userExists) {
       res.status(401).json({
         status: res.statusCode,
@@ -29,7 +30,6 @@ const loginController = async (req, res) => {
         } = userExists
         res.status(200).json({
           status: 200,
-          userInfo,
           token,
         })
       }
