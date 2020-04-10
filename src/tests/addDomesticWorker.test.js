@@ -14,7 +14,7 @@ const addDomesticTests = () => {
     it('should be able to register a Domestic worker', (done) => {
       const Signed = mockData.admin
       const newDome = mockData.user1
-      const Token = jwt.sign(Signed, process.env.secretkey, { expiresIn: '24h' })
+      const Token = jwt.sign(Signed, process.env.PRIVATE_KEY, { expiresIn: '24h' })
       chai.request(server)
         .post('/api/v1/auth/addDomestic')
         .set('token', Token)
@@ -27,7 +27,7 @@ const addDomesticTests = () => {
     it('should not be able to register a Domestic worker', (done) => {
       const newDome2 = ''
       const Signed = mockData.admin
-      const Token = jwt.sign(Signed, process.env.secretkey, { expiresIn: '24h' })
+      const Token = jwt.sign(Signed, process.env.PRIVATE_KEY, { expiresIn: '24h' })
 
       chai.request(server)
         .post('/api/v1/auth/addDomestic')
