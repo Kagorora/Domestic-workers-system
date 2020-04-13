@@ -13,7 +13,7 @@ export default class addDomWorkController {
       })
     }
     const newDomesticEmployee = await models.user.create({
-      firstName, lastName, phoneNumber, nid, status, type, description,
+      firstName, lastName, phoneNumber, nid, status, type: 'maid', description,
     })
 
     return res.status(201).json({

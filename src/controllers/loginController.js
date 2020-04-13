@@ -11,7 +11,7 @@ const loginController = async (req, res) => {
       },
       raw: true,
     })
-    
+
     if (!userExists) {
       res.status(401).json({
         status: res.statusCode,
