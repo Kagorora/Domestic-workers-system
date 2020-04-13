@@ -29,8 +29,7 @@ const domesticWorkersSchema = Joi.object().keys({
     .max(100),
   type: Joi.string()
     .min(3)
-    .max(100)
-    .required(),
+    .max(100),
   description: Joi.string()
     .min(3)
     .max(500),

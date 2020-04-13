@@ -10,7 +10,6 @@ class userValidate {
       phoneNumber: req.body.phoneNumber,
       nid: req.body.nid,
       status: req.body.status,
-      type: req.body.type,
       description: req.body.description,
       profile: req.body.profile,
       createdAt: req.body.createdAt,
